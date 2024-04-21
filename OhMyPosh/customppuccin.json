@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#b4befe",
+          "style": "plain",
+          "template": "\u256d\u2500",
+          "type": "text"
+        },
+        {
+          "background": "#b4befe",
+          "foreground": "#282a36",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#cba6f7",
+          "foreground": "#282a36",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#fab387",
+          "foreground": "#282a36",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": false,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) ",
+          "type": "git"
+        },
+        {
+          "background": "#94e2d5",
+          "foreground": "#282a36",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        },
+        {
+          "background": "#f38ba8",
+          "foreground": "#282a36",
+          "properties": {
+            "time_format": "3:04 PM"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "time"
+        },
+        {
+          "foreground": "#b4befe",
+          "style": "plain",
+          "template": "\n\u2570\u2500>>",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments":[
+        {
+          "background": "#f9e2af",
+          "foreground": "#282a36",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "trailing_diamond": "\ue0b4",
+          "type": "aws"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
