@@ -448,6 +448,13 @@ return {
           footer = { "" },
         },
       })
+
+      -- Dashboard Highlights
+      vim.api.nvim_command([[ highlight DashboardHeader guifg=#f38ba8 ]])
+      vim.api.nvim_command([[ highlight DashboardProjectTitle guifg=#fab387 ]])
+      vim.api.nvim_command([[ highlight DashboardProjectIcon guifg=#fab387 ]])
+      vim.api.nvim_command([[ highlight DashboardFiles guifg=#f9e2af ]])
+      vim.api.nvim_command([[ highlight DashboardMruTitle guifg=#f4b8e4]])
     end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
