@@ -9,48 +9,6 @@ if false then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  {
-    "catppuccin/nvim",
-    lazy = true,
-    name = "catppuccin",
-    opts = {
-      integrations = {
-        aerial = true,
-        alpha = true,
-        cmp = true,
-        dashboard = true,
-        flash = true,
-        gitsigns = true,
-        headlines = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
-      },
-    },
-  },
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
@@ -69,33 +27,47 @@ return {
   -- disable trouble
   { "folke/trouble.nvim", enabled = true },
 
-  -- override nvim-cmp and add cmp-emoji
   {
     "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
+    dependencies = {
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "onsails/lspkind.nvim",
+      "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+    },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
+      local cmp = require("cmp")
+      local cmp_select = {
+        behavior = cmp.SelectBehavior.Select,
+      }
+      require("luasnip/loaders/from_vscode").lazy_load()
+
       cmp.setup({
-        -- sources = {
-        --   {
-        --     name = "luasnip",
-        --     keyword_length = 2,
-        --   },
-        --   {
-        --     name = "path",
-        --   },
-        --   {
-        --     name = "nvim_lsp",
-        --   },
-        --   {
-        --     name = "nvim_lua",
-        --   },
-        --   {
-        --     name = "buffer",
-        --     keyword_length = 3,
-        --   },
-        -- },
-        formatting = lsp_zero.cmp_format(),
+        sources = {
+          {
+            name = "luasnip",
+            keyword_length = 2,
+          },
+          {
+            name = "path",
+          },
+          {
+            name = "nvim_lsp",
+          },
+          {
+            name = "nvim_lua",
+          },
+          {
+            name = "buffer",
+            keyword_length = 3,
+          },
+        },
         mapping = cmp.mapping.preset.insert({
           ["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
           ["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
@@ -382,6 +354,14 @@ return {
           end,
         })
       end,
+    },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    opts = {
+      options = {
+        always_show_bufferline = true,
+      },
     },
   },
   {

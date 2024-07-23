@@ -55,14 +55,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
----
--------------------------
--- Highlight Overrides --
--------------------------
 
 -- Hide line numbers in the dashboard
 vim.api.nvim_create_autocmd("FileType", {
-  group = "DashboardSetup",
   pattern = "dashboard",
   command = "setlocal nonumber norelativenumber",
 })
