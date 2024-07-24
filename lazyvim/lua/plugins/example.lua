@@ -201,7 +201,6 @@ return {
   --   end,
   -- },
 
-  -- or you can return new options to override all the defaults
   {
     "f-person/git-blame.nvim",
     config = function()
@@ -215,83 +214,83 @@ return {
       vim.g.gitblame_delay = 100
     end,
   },
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    opts = function()
-      local git_blame = require("gitblame")
-      return {
-
-        require("lualine").setup({
-          options = {
-            icons_enabled = true,
-            theme = "catppuccin",
-            component_separators = {
-              left = "",
-              right = "",
-            },
-            section_separators = {
-              left = "",
-              right = "",
-            },
-            disabled_filetypes = {
-              statusline = {},
-              winbar = {},
-            },
-            ignore_focus = {},
-            always_divide_middle = true,
-            globalstatus = false,
-            refresh = {
-              statusline = 1000,
-              tabline = 1000,
-              winbar = 1000,
-            },
-          },
-          sections = {
-            lualine_a = { "mode" },
-            lualine_b = { "branch", "diff", "diagnostics" },
-            lualine_c = {
-              {
-                color = {
-                  fg = "#1e1e2e",
-                  bg = "#1e1e2e",
-                },
-              },
-            },
-            lualine_x = {
-              {
-                git_blame.get_current_blame_text,
-                cond = git_blame.is_blame_text_available,
-                draw_empty = false,
-                separator = {
-                  right = "",
-                  left = "",
-                },
-                color = {
-                  fg = "#282A36",
-                  bg = "#eba0ac",
-                },
-              },
-            },
-            lualine_y = { "progress" },
-            lualine_z = { "location" },
-          },
-          inactive_sections = {
-            lualine_a = {},
-            lualine_b = {},
-            lualine_c = { "filename" },
-            lualine_x = { "location" },
-            lualine_y = {},
-            lualine_z = {},
-          },
-          tabline = {},
-          winbar = {},
-          inactive_winbar = {},
-          extensions = {},
-        }),
-      }
-    end,
-  },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   event = "VeryLazy",
+  --   opts = function()
+  --     -- local git_blame = require("gitblame")
+  --     return {
+  --
+  --       require("lualine").setup({
+  --         options = {
+  --           icons_enabled = true,
+  --           theme = "catppuccin",
+  --           component_separators = {
+  --             left = "",
+  --             right = "",
+  --           },
+  --           section_separators = {
+  --             left = "",
+  --             right = "",
+  --           },
+  --           disabled_filetypes = {
+  --             statusline = {},
+  --             winbar = {},
+  --           },
+  --           ignore_focus = {},
+  --           always_divide_middle = true,
+  --           globalstatus = false,
+  --           refresh = {
+  --             statusline = 1000,
+  --             tabline = 1000,
+  --             winbar = 1000,
+  --           },
+  --         },
+  --         sections = {
+  --           lualine_a = { "mode" },
+  --           lualine_b = { "branch", "diff", "diagnostics" },
+  --           lualine_c = {
+  --             {
+  --               color = {
+  --                 fg = "#1e1e2e",
+  --                 bg = "#1e1e2e",
+  --               },
+  --             },
+  --           },
+  --           lualine_x = {
+  --             {
+  --               git_blame.get_current_blame_text,
+  --               cond = git_blame.is_blame_text_available,
+  --               draw_empty = false,
+  --               separator = {
+  --                 right = "",
+  --                 left = "",
+  --               },
+  --               color = {
+  --                 fg = "#282A36",
+  --                 bg = "#eba0ac",
+  --               },
+  --             },
+  --           },
+  --           lualine_y = { "progress" },
+  --           lualine_z = { "location" },
+  --         },
+  --         inactive_sections = {
+  --           lualine_a = {},
+  --           lualine_b = {},
+  --           lualine_c = { "filename" },
+  --           lualine_x = { "location" },
+  --           lualine_y = {},
+  --           lualine_z = {},
+  --         },
+  --         tabline = {},
+  --         winbar = {},
+  --         inactive_winbar = {},
+  --         extensions = {},
+  --       }),
+  --     }
+  --   end,
+  -- },
 
   -- use mini.starter instead of alpha
   -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
@@ -366,11 +365,23 @@ return {
   },
   {
     "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    config = function()
-      require("dashboard").setup({
+    lazy = false,
+    opts = function()
+      local logo = {
+        "     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗ ",
+        "     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗",
+        "     ██║███████║███████╗█████╔╝ ██║██████╔╝",
+        "██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗",
+        "╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║",
+        " ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝",
+        "                                            ",
+      }
+      local opts = {
         theme = "hyper",
-        config = {
+        hide = {
+          -- this is taken care of by lualine
+          -- enabling this messes up the actual laststatus setting after loading a file
+          statusline = false,
           header = {
             "     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗ ",
             "     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗",
@@ -427,7 +438,7 @@ return {
           },
           footer = { "" },
         },
-      })
+      }
 
       -- Dashboard Highlights
       vim.api.nvim_command([[ highlight DashboardHeader guifg=#f38ba8 ]])
@@ -435,8 +446,22 @@ return {
       vim.api.nvim_command([[ highlight DashboardProjectIcon guifg=#fab387 ]])
       vim.api.nvim_command([[ highlight DashboardFiles guifg=#f9e2af ]])
       vim.api.nvim_command([[ highlight DashboardMruTitle guifg=#f4b8e4]])
+
+      -- open dashboard after closing lazy
+      if vim.o.filetype == "lazy" then
+        vim.api.nvim_create_autocmd("WinClosed", {
+          pattern = tostring(vim.api.nvim_get_current_win()),
+          once = true,
+          callback = function()
+            vim.schedule(function()
+              vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
+            end)
+          end,
+        })
+      end
+
+      return opts
     end,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   {
     "kdheepak/lazygit.nvim",
