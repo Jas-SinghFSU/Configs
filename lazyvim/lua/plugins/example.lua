@@ -88,15 +88,15 @@ return {
       -- stylua: ignore
       {
         "<leader>pf",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        function() require("telescope.builtin").find_files({ }) end,
         desc = "Find File",
       },
       {
         "<leader>ps",
         function()
-          require("telescope.builtin").grep_string({ cwd = require("lazy.core.config").options.root })
+          require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
         end,
-        desc = "Search File",
+        desc = "Search Words",
       },
     },
     -- change some options
@@ -367,30 +367,26 @@ return {
     "nvimdev/dashboard-nvim",
     lazy = false,
     opts = function()
-      local logo = {
-        "     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗ ",
-        "     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗",
-        "     ██║███████║███████╗█████╔╝ ██║██████╔╝",
-        "██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗",
-        "╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║",
-        " ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝",
-        "                                            ",
-      }
+      local logo = [[
+               ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗           
+               ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗          
+               ██║███████║███████╗█████╔╝ ██║██████╔╝          
+          ██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗          
+          ╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║          
+           ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝          
+        ]]
+
+      logo = string.rep("\n", 8) .. logo .. "\n\n"
+
       local opts = {
         theme = "hyper",
         hide = {
           -- this is taken care of by lualine
           -- enabling this messes up the actual laststatus setting after loading a file
           statusline = false,
-          header = {
-            "     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗ ",
-            "     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗",
-            "     ██║███████║███████╗█████╔╝ ██║██████╔╝",
-            "██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗",
-            "╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║",
-            " ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝",
-            "                                            ",
-          },
+        },
+        config = {
+          header = vim.split(logo, "\n"),
           shortcut = {
             {
               icon = "󰊳 ",
@@ -439,7 +435,6 @@ return {
           footer = { "" },
         },
       }
-
       -- Dashboard Highlights
       vim.api.nvim_command([[ highlight DashboardHeader guifg=#f38ba8 ]])
       vim.api.nvim_command([[ highlight DashboardProjectTitle guifg=#fab387 ]])
