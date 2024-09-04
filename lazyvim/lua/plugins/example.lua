@@ -49,10 +49,10 @@ return {
       require("luasnip/loaders/from_vscode").lazy_load()
 
       cmp.setup({
+        experimental = { ghost_text = false },
         sources = {
           {
             name = "luasnip",
-            keyword_length = 2,
           },
           {
             name = "path",
@@ -78,6 +78,9 @@ return {
         }),
       })
     end,
+    keys = {
+      { "<CR>", false },
+    },
   },
 
   -- change some telescope options and a keymap to browse plugin files
@@ -108,9 +111,16 @@ return {
     ---@class PluginLspOpts
     opts = {
       ---@type lspconfig.options
+      inlay_hints = { enabled = false },
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
+        cssls = {},
+        css_variables = {},
+        hyprls = {},
+        docker_compose_language_service = {},
+        dockerls = {},
+        somesass_ls = {},
       },
     },
   },
@@ -172,6 +182,7 @@ return {
         "regex",
         "tsx",
         "typescript",
+        "hyprlang",
         "vim",
         "yaml",
       },
@@ -368,12 +379,12 @@ return {
     lazy = false,
     opts = function()
       local logo = [[
-               ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗           
-               ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗          
-               ██║███████║███████╗█████╔╝ ██║██████╔╝          
-          ██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗          
-          ╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║          
-           ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝          
+               ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗
+               ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗
+               ██║███████║███████╗█████╔╝ ██║██████╔╝
+          ██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗
+          ╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║
+           ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
         ]]
 
       logo = string.rep("\n", 8) .. logo .. "\n\n"
@@ -465,4 +476,28 @@ return {
       -- config here
     end,
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup()
+    end,
+  },
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  {
+    "stevearc/oil.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+  },
+  -- {
+  --   "github/copilot.vim",
+  -- },
 }
