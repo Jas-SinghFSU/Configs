@@ -59,3 +59,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
+
+vim.g.lazyvim_prettier_needs_config = false

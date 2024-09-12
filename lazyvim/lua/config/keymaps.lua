@@ -6,7 +6,6 @@
 CONFORM = require("conform")
 
 vim.keymap.set("n", "<leader>gbo", "<cmd>:GitBlameOpenFileURL<CR>", { silent = true })
-vim.keymap.set("n", "<leader>lg", "<cmd>:LazyGit<CR>", { noremap = true, silent = true })
 
 -- Rename func/variable
 vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
@@ -19,6 +18,11 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true })
+
+-- Change the macro keybind from q to Q
+-- and disable the q keybind
+vim.api.nvim_set_keymap("n", "Q", "q", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "q", "<Nop>", { noremap = true, silent = true })
 
 -- Bufferline tab switching
 vim.keymap.set("n", "<leader>1", ':lua require"bufferline".go_to_buffer(1)<CR>', { noremap = true, silent = true })
@@ -41,7 +45,8 @@ vim.keymap.set({ "n", "i", "t" }, "<C-4>", "<cmd>4ToggleTerm<CR>", { noremap = t
 vim.keymap.set("n", "<leader>vs", "<cmd>:vsp<CR>", { silent = true })
 
 -- Delete current buffer
-vim.keymap.set("n", "<leader>x", "<cmd>:bd<CR>", { silent = true })
+-- Bind to leader delete
+vim.keymap.set("n", "<leader><Del>", "<cmd>:bd<CR>", { silent = true, noremap = true })
 
 -- Save current buffer
 vim.keymap.set("n", "<leader>w", "<cmd>:w<CR>", { silent = true })
@@ -60,8 +65,6 @@ vim.keymap.set("x", "p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-
-vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>ff", function()
   CONFORM.format({ async = true, lsp_fallback = true })

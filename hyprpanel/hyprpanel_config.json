@@ -4,6 +4,7 @@
     "0": {
       "left": [
         "dashboard",
+        "kbinput",
         "workspaces",
         "windowtitle"
       ],
@@ -73,17 +74,17 @@
   "theme.osd.enable": true,
   "theme.matugen_settings.mode": "dark",
   "theme.matugen_settings.contrast": 0,
-  "theme.matugen_settings.scheme_type": "tonal-spot",
+  "theme.matugen_settings.scheme_type": "expressive",
   "bar.workspaces.show_icons": true,
   "bar.workspaces.show_numbered": false,
-  "theme.matugen_settings.variation": "standard_2",
-  "theme.osd.orientation": "vertical",
+  "theme.matugen_settings.variation": "standard_1",
+  "theme.osd.orientation": "horizontal",
   "bar.workspaces.numbered_active_indicator": "underline",
   "notifications.position": "top right",
   "notifications.active_monitor": false,
   "notifications.monitor": 0,
   "bar.media.truncation": true,
-  "bar.media.show_artist": false,
+  "bar.media.show_artist": true,
   "bar.media.truncation_size": 30,
   "theme.bar.buttons.media.spacing": "0.5em",
   "bar.escape_to_close": true,
@@ -96,7 +97,7 @@
   "bar.network.truncation_size": 10,
   "bar.network.truncation": true,
   "wallpaper.enable": true,
-  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/Mocha_Wolf.png",
+  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/Island.jpg",
   "bar.workspaces.workspaces": 7,
   "menus.dashboard.powermenu.sleep": "systemctl suspend",
   "menus.dashboard.powermenu.confirmation": true,
@@ -104,8 +105,8 @@
   "theme.bar.menus.menu.media.card.tint": 85,
   "theme.bar.menus.border.radius": "0.7em",
   "notifications.timeout": 7000,
-  "theme.osd.location": "right",
-  "theme.osd.margins": "0px 5px 0px 0px",
+  "theme.osd.location": "bottom",
+  "theme.osd.margins": "0px 0px 70px 0px",
   "bar.bluetooth.label": true,
   "bar.media.show_label": true,
   "bar.workspaces.spacing": 1.5,
@@ -134,12 +135,23 @@
   "menus.dashboard.powermenu.avatar.name": "Jaskir",
   "menus.clock.weather.unit": "imperial",
   "theme.bar.layer": "top",
-  "bar.windowtitle.title_map": [],
+  "bar.windowtitle.title_map": [
+    [
+      "com.github.aylur.ags",
+      "",
+      "HyprPanel Settings"
+    ],
+    [
+      "zen-alpha",
+      "󰈹",
+      "Zen Browser"
+    ]
+  ],
   "theme.osd.scaling": 100,
-  "theme.notification.scaling": 100,
-  "theme.bar.menus.menu.notifications.scaling": 100,
-  "theme.bar.menus.menu.clock.scaling": 100,
-  "theme.bar.menus.menu.dashboard.scaling": 95,
+  "theme.notification.scaling": 95,
+  "theme.bar.menus.menu.notifications.scaling": 95,
+  "theme.bar.menus.menu.clock.scaling": 95,
+  "theme.bar.menus.menu.dashboard.scaling": 90,
   "theme.bar.menus.menu.media.scaling": 100,
   "theme.bar.menus.menu.volume.scaling": 100,
   "theme.bar.menus.menu.bluetooth.scaling": 100,
@@ -229,5 +241,21 @@
   "bar.customModules.power.icon": "",
   "bar.customModules.netstat.pollingInterval": 2000,
   "bar.customModules.cpu.pollingInterval": 2000,
-  "bar.customModules.netstat.networkInterface": "enp42s0"
+  "bar.customModules.netstat.networkInterface": "enp42s0",
+  "bar.media.show_active_only": false,
+  "bar.customModules.updates.leftClick": "",
+  "bar.systray.ignore": [
+    "spotify-client"
+  ],
+  "notifications.ignore": [
+    "spotify"
+  ],
+  "theme.osd.radius": "0.4em",
+  "bar.windowtitle.class_name": true,
+  "bar.windowtitle.custom_title": true,
+  "bar.windowtitle.icon": true,
+  "wallpaper.pywal": true,
+  "bar.customModules.kbLayout.label": true,
+  "bar.customModules.updates.scrollDown": "",
+  "theme.osd.duration": 2000
 }
