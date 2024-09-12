@@ -34,14 +34,14 @@ return {
             {
               icon = " ",
               desc = "Files",
-              group = "PreProc",
+              group = "Label",
               action = "Telescope find_files",
               key = "f",
             },
             {
               icon = "󰬔 ",
               desc = "Mason",
-              group = "Character",
+              group = "String",
               action = "Mason",
               key = "m",
             },
@@ -50,6 +50,12 @@ return {
               group = "Error",
               action = "Telescope find_files cwd=~/.config/nvim",
               key = "c",
+            },
+            {
+              desc = " Hyprland",
+              group = "@property",
+              action = "e ~/.config/hypr/hyprland.conf",
+              key = "h",
             },
           },
           packages = {
