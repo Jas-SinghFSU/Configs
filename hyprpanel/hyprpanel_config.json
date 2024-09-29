@@ -2,6 +2,11 @@
   "theme.bar.outer_spacing": "1.6em",
   "bar.layouts": {
     "0": {
+      "left": [
+        "dashboard",
+        "windowtitle",
+        "media"
+      ],
       "middle": [
         "updates",
         "workspaces",
@@ -53,13 +58,13 @@
   "theme.osd.enable": true,
   "theme.matugen_settings.mode": "dark",
   "theme.matugen_settings.contrast": 0,
-  "theme.matugen_settings.scheme_type": "expressive",
+  "theme.matugen_settings.scheme_type": "content",
   "bar.workspaces.show_icons": false,
   "bar.workspaces.show_numbered": false,
-  "theme.matugen_settings.variation": "vivid_3",
+  "theme.matugen_settings.variation": "standard_1",
   "theme.osd.orientation": "horizontal",
   "bar.workspaces.numbered_active_indicator": "highlight",
-  "notifications.position": "top right",
+  "notifications.position": "top",
   "notifications.active_monitor": false,
   "notifications.monitor": 0,
   "bar.media.truncation": true,
@@ -259,8 +264,8 @@
       "color": "#cba6f7"
     },
     "4": {
-      "icon": "󰇩",
-      "color": "#89dceb"
+      "icon": "󰙯",
+      "color": "#b4befe"
     },
     "5": {
       "icon": "󰄛",
@@ -289,7 +294,7 @@
   },
   "theme.bar.buttons.workspaces.fontSize": "1.3em",
   "bar.workspaces.underlineType": "decoration",
-  "menus.clock.weather.enabled": true,
+  "menus.clock.weather.enabled": false,
   "menus.dashboard.directories.right.directory3.command": "bash -c \"nemo $HOME/\"",
   "menus.dashboard.directories.right.directory2.command": "bash -c \"nemo $HOME/Pictures/\"",
   "menus.dashboard.directories.right.directory1.command": "bash -c \"nemo $HOME/Documents/\"",
@@ -332,5 +337,8 @@
   "bar.customModules.submap.enabledIcon": "󰌐",
   "theme.bar.buttons.modules.submap.enableBorder": false,
   "bar.customModules.submap.leftClick": "",
-  "bar.workspaces.ignored": ""
+  "bar.workspaces.ignored": "",
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.workspaces.smartHighlight": true,
+  "bar.workspaces.showAllActive": true
 }
