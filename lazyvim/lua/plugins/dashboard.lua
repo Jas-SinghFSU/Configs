@@ -3,17 +3,6 @@ return {
     "nvimdev/dashboard-nvim",
     lazy = false,
     opts = function()
-      local logo = [[
-               ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗
-               ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗
-               ██║███████║███████╗█████╔╝ ██║██████╔╝
-          ██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗
-          ╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║
-           ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
-        ]]
-
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-
       local opts = {
         theme = "hyper",
         hide = {
@@ -22,7 +11,15 @@ return {
           statusline = false,
         },
         config = {
-          header = vim.split(logo, "\n"),
+          header = {
+            "     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗ ",
+            "     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗",
+            "     ██║███████║███████╗█████╔╝ ██║██████╔╝",
+            "██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗",
+            "╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║",
+            " ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝",
+            "                                            ",
+          },
           shortcut = {
             {
               icon = "󰊳 ",
@@ -56,6 +53,12 @@ return {
               group = "@property",
               action = "e ~/.config/hypr/hyprland.conf",
               key = "h",
+            },
+            {
+              desc = "󰆍 Wezterm",
+              group = "Statement",
+              action = "e ~/.config/wezterm/wezterm.lua",
+              key = "w",
             },
           },
           packages = {
