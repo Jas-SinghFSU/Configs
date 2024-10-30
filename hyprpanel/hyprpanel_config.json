@@ -47,6 +47,7 @@
   "theme.bar.floating": false,
   "theme.bar.buttons.notifications.spacing": "0.5em",
   "menus.clock.weather.location": "93722",
+  "menus.clock.weather.key": "/home/jaskir/Config/keys.json",
   "menus.clock.weather.interval": 60000,
   "menus.dashboard.powermenu.avatar.image": "/home/jaskir/Pictures/Wallpapers/Astronaut-Mocha.jpg",
   "theme.bar.transparent": false,
@@ -103,7 +104,7 @@
   "theme.notification.opacity": 100,
   "theme.osd.opacity": 100,
   "bar.battery.label": true,
-  "terminal": "kitty",
+  "terminal": "$TERMINAL",
   "theme.bar.buttons.windowtitle.spacing": "0.5em",
   "theme.bar.menus.card_radius": "0.4em",
   "menus.dashboard.directories.left.directory1.label": "󰉍    Downloads",
@@ -142,13 +143,13 @@
   "theme.bar.menus.menu.network.scaling": 100,
   "theme.bar.scaling": 97,
   "theme.bar.buttons.y_margins": "0.3em",
-  "theme.bar.menus.menu.dashboard.confirmation_scaling": 100,
+  "theme.bar.menus.menu.dashboard.confirmation_scaling": 95,
   "theme.bar.margin_sides": "0.5em",
   "theme.bar.border_radius": "0.4em",
   "bar.volume.label": true,
   "bar.network.label": true,
   "theme.bar.buttons.background_opacity": 100,
-  "theme.bar.buttons.background_hover_opacity": 100,
+  "theme.bar.buttons.background_hover_opacity": 50,
   "theme.bar.buttons.network.spacing": "0.5em",
   "bar.windowtitle.label": true,
   "notifications.cache_actions": false,
@@ -205,7 +206,7 @@
   "bar.customModules.netstat.round": true,
   "theme.bar.buttons.modules.netstat.spacing": "0.5em",
   "bar.customModules.netstat.label": true,
-  "bar.customModules.netstat.leftClick": "",
+  "bar.customModules.netstat.leftClick": "menu:network",
   "bar.customModules.kbLayout.labelType": "code",
   "bar.customModules.kbLayout.icon": "󰌌",
   "theme.bar.buttons.modules.updates.spacing": "0.4em",
@@ -252,7 +253,7 @@
   "bar.workspaces.showWsIcons": true,
   "bar.workspaces.workspaceIconMap": {
     "1": {
-      "icon": "󰄛",
+      "icon": "󰆍",
       "color": "#f5c2e7"
     },
     "2": {
@@ -268,7 +269,7 @@
       "color": "#b4befe"
     },
     "5": {
-      "icon": "󰄛",
+      "icon": "󰆍",
       "color": "#f5c2e7"
     },
     "6": {
@@ -276,7 +277,7 @@
       "color": "#89dceb"
     },
     "7": {
-      "icon": "󰄛",
+      "icon": "󰆍",
       "color": "#f5c2e7"
     },
     "8": {
@@ -288,13 +289,13 @@
       "color": "#fab387"
     },
     "10": {
-      "icon": "󰄛",
+      "icon": "󰆍",
       "color": "#f5c2e7"
     }
   },
   "theme.bar.buttons.workspaces.fontSize": "1.3em",
   "bar.workspaces.underlineType": "decoration",
-  "menus.clock.weather.enabled": false,
+  "menus.clock.weather.enabled": true,
   "menus.dashboard.directories.right.directory3.command": "bash -c \"nemo $HOME/\"",
   "menus.dashboard.directories.right.directory2.command": "bash -c \"nemo $HOME/Pictures/\"",
   "menus.dashboard.directories.right.directory1.command": "bash -c \"nemo $HOME/Documents/\"",
@@ -340,5 +341,40 @@
   "bar.workspaces.ignored": "",
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.workspaces.smartHighlight": true,
-  "bar.workspaces.showAllActive": true
+  "bar.workspaces.showAllActive": true,
+  "bar.customModules.submap.showSubmapName": true,
+  "menus.transition": "crossfade",
+  "menus.transitionTime": 200,
+  "theme.bar.menus.menu.battery.scaling": 100,
+  "menus.dashboard.directories.enabled": true,
+  "bar.notifications.hideCountWhenZero": false,
+  "menus.clock.time.hideSeconds": false,
+  "menus.dashboard.controls.enabled": true,
+  "menus.dashboard.shortcuts.enabled": true,
+  "menus.dashboard.stats.enabled": true,
+  "notifications.clearDelay": 10,
+  "bar.customModules.ram.icon": "",
+  "bar.customModules.cpu.icon": "",
+  "bar.network.showWifiInfo": true,
+  "menus.dashboard.stats.interval": 2000,
+  "theme.bar.menus.switch.radius": "0.2em",
+  "theme.bar.menus.switch.slider_radius": "0.2em",
+  "theme.bar.menus.slider.slider_radius": "0.3rem",
+  "theme.bar.menus.slider.progress_radius": "0.3rem",
+  "bar.workspaces.showApplicationIcons": true,
+  "bar.workspaces.applicationIconMap": {},
+  "bar.workspaces.icons.available": "",
+  "bar.workspaces.icons.active": "",
+  "bar.customModules.netstat.dynamicIcon": false,
+  "bar.workspaces.applicationIconEmptyWorkspace": "",
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
+  "bar.workspaces.applicationIconFallback": "󰣆",
+  "bar.volume.raiseMaximumVolume": false,
+  "menus.volume.raiseMaximumVolume": false,
+  "bar.media.format": "{artists: - }{title}",
+  "menus.media.hideAuthor": false,
+  "menus.media.hideAlbum": false,
+  "menus.bluetooth.showBattery": true,
+  "menus.bluetooth.batteryState": "connected",
+  "menus.bluetooth.batteryIcon": "󰥉"
 }

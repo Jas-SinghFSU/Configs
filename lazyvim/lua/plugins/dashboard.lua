@@ -55,10 +55,10 @@ return {
               key = "h",
             },
             {
-              desc = "󰆍 Wezterm",
+              desc = "󰆍 Kitty",
               group = "Statement",
-              action = "e ~/.config/wezterm/wezterm.lua",
-              key = "w",
+              action = "e ~/.config/kitty/kitty.conf",
+              key = "k",
             },
           },
           packages = {
