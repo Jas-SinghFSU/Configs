@@ -66,3 +66,26 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     })
   end,
 })
+
+-- Set cursor styles for different modes
+vim.opt.guicursor = {
+  "n-v-c-sm:block-Cursor", -- Normal, Visual, Command-line, Select modes
+  "i-ci-ve:ver25-Cursor", -- Insert modes
+  "r-cr-o:hor20-Cursor", -- Replace and other modes
+}
+
+-- Function to set the Cursor highlight group
+local function set_cursor_highlight()
+  vim.cmd([[highlight Cursor guibg=#b4befe guifg=#11111b]])
+end
+
+-- Apply the Cursor highlight after setting the colorscheme
+vim.cmd([[
+  augroup CustomizeCursor
+    autocmd!
+    autocmd Colorscheme * lua set_cursor_highlight()
+  augroup END
+]])
+
+-- Initial call to set the Cursor highlight
+set_cursor_highlight()

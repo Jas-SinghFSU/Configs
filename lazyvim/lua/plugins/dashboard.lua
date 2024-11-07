@@ -58,7 +58,7 @@ return {
               desc = "󰆍 Kitty",
               group = "Statement",
               action = "e ~/.config/kitty/kitty.conf",
-              key = "k",
+              key = "t",
             },
           },
           packages = {
