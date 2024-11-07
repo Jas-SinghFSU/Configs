@@ -81,11 +81,11 @@ return {
         },
       }
       -- Dashboard Highlights
-      vim.api.nvim_command([[ highlight DashboardHeader guifg=#f38ba8 ]])
+      vim.api.nvim_command([[ highlight DashboardHeader guifg=#eb6f92]])
       vim.api.nvim_command([[ highlight DashboardProjectTitle guifg=#fab387 ]])
-      vim.api.nvim_command([[ highlight DashboardProjectIcon guifg=#fab387 ]])
-      vim.api.nvim_command([[ highlight DashboardFiles guifg=#f9e2af ]])
-      vim.api.nvim_command([[ highlight DashboardMruTitle guifg=#f4b8e4]])
+      vim.api.nvim_command([[ highlight DashboardProjectIcon guifg=#ebbcba]])
+      vim.api.nvim_command([[ highlight DashboardFiles guifg=#f6c177]])
+      vim.api.nvim_command([[ highlight DashboardMruTitle guifg=#c4a7e7]])
 
       -- open dashboard after closing lazy
       if vim.o.filetype == "lazy" then
