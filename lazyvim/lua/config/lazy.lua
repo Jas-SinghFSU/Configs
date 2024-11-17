@@ -76,7 +76,7 @@ vim.opt.guicursor = {
 
 -- Function to set the Cursor highlight group
 local function set_cursor_highlight()
-  vim.cmd([[highlight Cursor guibg=#b4befe guifg=#11111b]])
+  vim.cmd([[highlight Cursor guibg=#31748f guifg=#11111b]])
 end
 
 -- Apply the Cursor highlight after setting the colorscheme

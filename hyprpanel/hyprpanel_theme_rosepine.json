@@ -234,7 +234,7 @@
   "theme.bar.buttons.workspaces.active": "#c4a7e7",
   "theme.bar.buttons.workspaces.occupied": "#eb6f92",
   "theme.bar.buttons.workspaces.available": "#9ccfd8",
-  "theme.bar.buttons.workspaces.hover": "#c4a7e7",
+  "theme.bar.buttons.workspaces.hover": "#524f67",
   "theme.bar.buttons.workspaces.background": "#21202e",
   "theme.bar.buttons.dashboard.icon": "#21202e",
   "theme.bar.buttons.dashboard.hover": "#504945",
@@ -365,5 +365,16 @@
   "theme.bar.buttons.modules.cpuTemp.icon_background": "#fab387",
   "theme.bar.buttons.modules.cpuTemp.icon": "#181824",
   "theme.bar.buttons.modules.cpuTemp.text": "#fab387",
-  "theme.bar.buttons.modules.cpuTemp.border": "#fab387"
+  "theme.bar.buttons.modules.cpuTemp.border": "#fab387",
+  "theme.bar.buttons.borderColor": "#c4a7e7",
+  "theme.bar.buttons.modules.hyprsunset.icon": "#181825",
+  "theme.bar.buttons.modules.hyprsunset.icon_background": "#f6c177",
+  "theme.bar.buttons.modules.hyprsunset.background": "#2a283e",
+  "theme.bar.buttons.modules.hyprsunset.text": "#f6c177",
+  "theme.bar.buttons.modules.hyprsunset.border": "#f6c177",
+  "theme.bar.buttons.modules.hypridle.icon_background": "#eb6f92",
+  "theme.bar.buttons.modules.hypridle.icon": "#181825",
+  "theme.bar.buttons.modules.hypridle.background": "#2a283e",
+  "theme.bar.buttons.modules.hypridle.text": "#eb6f92",
+  "theme.bar.buttons.modules.hypridle.border": "#eb6f92"
 }
