@@ -14,6 +14,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require("functions.banner")
+
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
@@ -79,6 +81,25 @@ local function set_cursor_highlight()
   vim.cmd([[highlight Cursor guibg=#31748f guifg=#11111b]])
 end
 
+local function set_snacks_highlights()
+  ---------------
+  -- DASHBOARD --
+  ---------------
+  vim.cmd([[highlight SnacksDashboardHeader guifg=#eb6f92]])
+  vim.cmd([[highlight SnacksDashboardIcon guifg=#31748f]])
+  vim.cmd([[highlight SnacksDashboardTitle guifg=#31748f]])
+  vim.cmd([[highlight SnacksDashboardKey guifg=#ebbcba]])
+  vim.cmd([[highlight SnacksDashboardDesc guifg=#f6c177]])
+  vim.cmd([[highlight SnacksDashboardDir guifg=#c4a7e7]])
+  vim.cmd([[highlight SnacksDashboardFile guifg=#9ccfd8]])
+
+  ----------------
+  --   INDENT   --
+  ----------------
+  vim.cmd([[highlight SnacksIndent guifg=#26233a]])
+  vim.cmd([[highlight SnacksIndentScope guifg=#9ccfd8]])
+end
+
 -- Apply the Cursor highlight after setting the colorscheme
 vim.cmd([[
   augroup CustomizeCursor
@@ -89,3 +110,4 @@ vim.cmd([[
 
 -- Initial call to set the Cursor highlight
 set_cursor_highlight()
+set_snacks_highlights()

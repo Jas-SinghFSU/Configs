@@ -1,106 +1,58 @@
 return {
   {
-    "nvimdev/dashboard-nvim",
+    "folke/snacks.nvim",
     lazy = false,
-    opts = function()
-      local opts = {
-        theme = "hyper",
-        hide = {
-          -- this is taken care of by lualine
-          -- enabling this messes up the actual laststatus setting after loading a file
-          statusline = false,
+    enabled = true,
+    opts = {
+      dashboard = {
+        example = "advanced",
+        preset = {
+          header = [[
+     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗  
+     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗ 
+     ██║███████║███████╗█████╔╝ ██║██████╔╝ 
+██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗ 
+╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║ 
+ ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ]],
         },
-        config = {
-          header = {
-            "     ██╗ █████╗ ███████╗██╗  ██╗██╗██████╗ ",
-            "     ██║██╔══██╗██╔════╝██║ ██╔╝██║██╔══██╗",
-            "     ██║███████║███████╗█████╔╝ ██║██████╔╝",
-            "██   ██║██╔══██║╚════██║██╔═██╗ ██║██╔══██╗",
-            "╚█████╔╝██║  ██║███████║██║  ██╗██║██║  ██║",
-            " ╚════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝",
-            "                                            ",
+        sections = {
+          { section = "header", hl = "@property" },
+          {
+            icon = " ",
+            title = "Keymaps",
+            hl = "DashboardTitle",
+            section = "keys",
+            indent = 2,
+            padding = 1,
           },
-          shortcut = {
-            {
-              icon = "󰊳 ",
-              desc = "Update",
-              group = "Statement",
-              action = "Lazy update",
-              key = "u",
-            },
-            {
-              icon = " ",
-              desc = "Files",
-              group = "Label",
-              action = "Telescope find_files",
-              key = "f",
-            },
-            {
-              icon = "󰬔 ",
-              desc = "Mason",
-              group = "String",
-              action = "Mason",
-              key = "m",
-            },
-            {
-              desc = " Config",
-              group = "Error",
-              action = "Telescope find_files cwd=~/.config/nvim",
-              key = "c",
-            },
-            {
-              desc = " Hyprland",
-              group = "@property",
-              action = "e ~/.config/hypr/hyprland.conf",
-              key = "h",
-            },
-            {
-              desc = "󰆍 Kitty",
-              group = "Statement",
-              action = "e ~/.config/kitty/kitty.conf",
-              key = "t",
-            },
+          {
+            icon = " ",
+            title = "Recent Files",
+            hl = "DashboardTitle",
+            section = "recent_files",
+            indent = 2,
+            padding = 1,
           },
-          packages = {
-            enable = true,
+          {
+            icon = " ",
+            title = "Projects",
+            hl = "DashboardTitle",
+            section = "projects",
+            indent = 2,
+            padding = 1,
           },
-          project = {
-            enable = true,
-            limit = 8,
-            icon = " ",
-            group = "String",
-            label = "Recent Projects",
-            action = "Telescope find_files cwd=",
-          },
-          mru = {
-            icon = "󰈮 ",
-            label = "Recent Files",
-            cwd_only = true,
-          },
-          footer = { "" },
+          { section = "startup" },
         },
-      }
-      -- Dashboard Highlights
-      vim.api.nvim_command([[ highlight DashboardHeader guifg=#eb6f92]])
-      vim.api.nvim_command([[ highlight DashboardProjectTitle guifg=#fab387 ]])
-      vim.api.nvim_command([[ highlight DashboardProjectIcon guifg=#ebbcba]])
-      vim.api.nvim_command([[ highlight DashboardFiles guifg=#f6c177]])
-      vim.api.nvim_command([[ highlight DashboardMruTitle guifg=#c4a7e7]])
-
-      -- open dashboard after closing lazy
-      if vim.o.filetype == "lazy" then
-        vim.api.nvim_create_autocmd("WinClosed", {
-          pattern = tostring(vim.api.nvim_get_current_win()),
-          once = true,
-          callback = function()
-            vim.schedule(function()
-              vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
-            end)
-          end,
-        })
-      end
-
-      return opts
-    end,
+      },
+    },
+    keys = {
+      {
+        "<leader><CR>",
+        function()
+          Snacks.dashboard()
+        end,
+        desc = "Toggle Dashboard",
+      },
+    },
   },
 }

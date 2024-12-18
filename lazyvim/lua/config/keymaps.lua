@@ -105,5 +105,3 @@ vim.keymap.set({ "n", "i" }, "<C-v>", '"+p')
 -- end, { silent = true })
 
 vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { silent = true })
-
-vim.keymap.set("n", "<leader><CR>", ":Dashboard<CR>", { noremap = true, silent = true })
