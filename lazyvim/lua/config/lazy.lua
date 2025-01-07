@@ -14,8 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("functions.banner")
-
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
@@ -56,6 +54,8 @@ require("lazy").setup({
     },
   },
 })
+
+require("functions.banner")
 
 -- Hyprlang LSP
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
