@@ -1,6 +1,7 @@
 return {
   {
     "folke/snacks.nvim",
+    ---@type snacks.Config
     priority = 1000,
     lazy = false,
     enabled = true,
@@ -14,6 +15,7 @@ return {
       statuscolumn = { enabled = true },
       scroll = { enabled = false },
       words = { enabled = true },
+      picker = {},
       lazygit = {
         ---@class snacks.lazygit.Config: snacks.terminal.Opts
         ---@field args? string[]
@@ -50,6 +52,43 @@ return {
             style = "lazygit",
           },
         },
+      },
+    },
+    keys = {
+      {
+        "<leader><space>",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find Files",
+      },
+      {
+        "<leader>pf",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find Files",
+      },
+      {
+        "<leader>pd",
+        function()
+          Snacks.picker.diagnostics()
+        end,
+        desc = "Diagnostics",
+      },
+      {
+        "<leader>ps",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Grep",
+      },
+      {
+        "<leader>sT",
+        function()
+          Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } })
+        end,
+        desc = "Todo/Fix/Fixme",
       },
     },
   },
