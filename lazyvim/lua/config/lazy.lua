@@ -26,7 +26,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.dot" },
 
     { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-    { import = "lazyvim.plugins.extras.ai.copilot" },
+    -- { import = "lazyvim.plugins.extras.ai.copilot" },
 
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.rust" },
@@ -85,7 +85,7 @@ vim.opt.guicursor = {
 
 -- Function to set the Cursor highlight group
 local function set_cursor_highlight()
-  vim.cmd([[highlight Cursor guibg=#31748f guifg=#11111b]])
+  vim.cmd([[highlight Cursor guibg=#b4bef3 guifg=#11111b]])
 end
 
 local function set_snacks_highlights()

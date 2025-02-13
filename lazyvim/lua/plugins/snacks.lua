@@ -56,7 +56,7 @@ return {
     },
     keys = {
       {
-        "<leader><space>",
+        "<leader><leader>",
         function()
           Snacks.picker.files()
         end,

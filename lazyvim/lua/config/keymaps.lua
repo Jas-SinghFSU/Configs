@@ -81,10 +81,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/init.lua<CR>")
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 
-vim.keymap.set("n", "<leader><leader>", function()
-  vim.cmd("so")
-end)
-
 vim.keymap.set({ "n", "i" }, "<C-v>", '"+p')
 
 --  LuaSnip snippet keybinds
@@ -105,3 +101,9 @@ vim.keymap.set({ "n", "i" }, "<C-v>", '"+p')
 -- end, { silent = true })
 
 vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { silent = true })
+
+-- Execute scratchpad
+vim.keymap.set("n", "<leader>ej", "<cmd>w !node<CR>", { silent = true })
+
+-- Remove keybinds
+vim.keymap.del("n", "<leader>e")

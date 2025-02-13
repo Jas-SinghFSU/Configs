@@ -20,6 +20,15 @@ return {
         docker_compose_language_service = {},
         dockerls = {},
         somesass_ls = {},
+        vtsls = {
+          settings = {
+            typescript = {
+              preferences = {
+                importModuleSpecifierEnding = "minimal",
+              },
+            },
+          },
+        },
       },
     },
   },
