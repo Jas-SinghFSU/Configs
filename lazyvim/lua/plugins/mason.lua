@@ -37,7 +37,7 @@ return {
           shell = "zsh",
           direction = "float",
           highlights = {
-            FloatBorder = { guifg = "#BD93F9" },
+            FloatBorder = { guifg = "#cba6f7" },
           },
           float_opts = {
             border = "single",

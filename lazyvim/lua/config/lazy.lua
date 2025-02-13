@@ -104,7 +104,7 @@ local function set_snacks_highlights()
   --   INDENT   --
   ----------------
   vim.cmd([[highlight SnacksIndent guifg=#26233a]])
-  vim.cmd([[highlight SnacksIndentScope guifg=#9ccfd8]])
+  vim.cmd([[highlight SnacksIndentScope guifg=#94e2d5]])
 end
 
 -- Apply the Cursor highlight after setting the colorscheme
