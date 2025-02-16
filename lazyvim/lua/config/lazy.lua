@@ -93,12 +93,12 @@ local function set_snacks_highlights()
   -- DASHBOARD --
   ---------------
   vim.cmd([[highlight SnacksDashboardHeader guifg=#f38ba8]])
-  vim.cmd([[highlight SnacksDashboardIcon guifg=#74c7e7]])
-  vim.cmd([[highlight SnacksDashboardTitle guifg=#74c7e7]])
+  vim.cmd([[highlight SnacksDashboardIcon guifg=#b4befe]])
+  vim.cmd([[highlight SnacksDashboardTitle guifg=#b4befe]])
   vim.cmd([[highlight SnacksDashboardKey guifg=#89dceb]])
   vim.cmd([[highlight SnacksDashboardDesc guifg=#fab387]])
-  vim.cmd([[highlight SnacksDashboardDir guifg=#cba6f7]])
-  vim.cmd([[highlight SnacksDashboardFile guifg=#94e2d5]])
+  vim.cmd([[highlight SnacksDashboardFile guifg=#cba6f7]])
+  vim.cmd([[highlight SnacksDashboardDir guifg=#f2cdcd]])
 
   ----------------
   --   INDENT   --
