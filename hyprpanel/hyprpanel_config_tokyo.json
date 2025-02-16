@@ -80,7 +80,7 @@
   "bar.network.truncation_size": 10,
   "bar.network.truncation": true,
   "wallpaper.enable": true,
-  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/Catppuccin/ruins-in-jungle.jpeg",
+  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/TokyoNight/island-house.jpeg",
   "bar.workspaces.workspaces": 8,
   "menus.dashboard.powermenu.sleep": "systemctl suspend",
   "menus.dashboard.powermenu.confirmation": true,
@@ -253,34 +253,34 @@
   "bar.workspaces.showWsIcons": true,
   "bar.workspaces.workspaceIconMap": {
     "1": {
-      "color": "#fca7ea"
+      "color": "#e87ab8"
     },
     "2": {
       "color": "#0db9d7"
     },
     "3": {
-      "color": "#ff757f"
+      "color": "#f7768e"
     },
     "4": {
-      "color": "#3e68d7"
+      "color": "#7aa2f7"
     },
     "5": {
       "color": "#41a6b5"
     },
     "6": {
-      "color": "#c3e88d"
+      "color": "#9ece6a"
     },
     "7": {
-      "color": "#c099ff"
+      "color": "#bb9af7"
     },
     "8": {
-      "color": "#ffc777"
+      "color": "#e0af68"
     },
     "9": {
-      "color": "#ff966c"
+      "color": "#ff9e64"
     },
     "10": {
-      "color": "#4fd6be"
+      "color": "#73daca"
     }
   },
   "theme.bar.buttons.workspaces.fontSize": "1.3em",
@@ -355,6 +355,7 @@
   "bar.workspaces.applicationIconMap": {
     "class:kitty$": "󰄛",
     "title:Settings": "",
+    "title:Plex": "󰚺",
     "title:Baldur's Gate 3": ""
   },
   "bar.workspaces.icons.available": "",

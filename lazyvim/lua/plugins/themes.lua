@@ -2,7 +2,7 @@ return {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "rose-pine/neovim", name = "rose-pine" },
   {
-    "folke/tokyonight.nvim",
+    "Jas-SinghFSU/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
@@ -10,7 +10,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = "tokyonight-jas",
     },
   },
 }
