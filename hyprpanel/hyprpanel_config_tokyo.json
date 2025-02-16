@@ -7,8 +7,15 @@
   "theme.bar.outer_spacing": "0em",
   "bar.layouts": {
     "0": {
-      "left": ["dashboard", "media"],
-      "middle": ["notifications", "workspaces", "updates"],
+      "left": [
+        "dashboard",
+        "media"
+      ],
+      "middle": [
+        "notifications",
+        "workspaces",
+        "updates"
+      ],
       "right": [
         "volume",
         "network",
@@ -20,9 +27,16 @@
       ]
     },
     "*": {
-      "left": ["dashboard"],
-      "middle": ["workspaces"],
-      "right": ["volume", "clock"]
+      "left": [
+        "dashboard"
+      ],
+      "middle": [
+        "workspaces"
+      ],
+      "right": [
+        "volume",
+        "clock"
+      ]
     }
   },
   "bar.workspaces.scroll_speed": 2,
@@ -105,9 +119,21 @@
   "menus.clock.weather.unit": "imperial",
   "theme.bar.layer": "bottom",
   "bar.windowtitle.title_map": [
-    ["com.github.aylur.ags", "", "HyprPanel Settings"],
-    ["zen-alpha", "󰈹", "Zen Browser"],
-    ["org.prismlauncher.prismlauncher", "󰍳", "Prism Launcher"]
+    [
+      "com.github.aylur.ags",
+      "",
+      "HyprPanel Settings"
+    ],
+    [
+      "zen-alpha",
+      "󰈹",
+      "Zen Browser"
+    ],
+    [
+      "org.prismlauncher.prismlauncher",
+      "󰍳",
+      "Prism Launcher"
+    ]
   ],
   "theme.osd.scaling": 100,
   "theme.notification.scaling": 95,
@@ -206,7 +232,9 @@
   "bar.media.show_active_only": true,
   "bar.customModules.updates.leftClick": "kitty -e $HOME/Scripts/updateArch.sh -arch",
   "bar.systray.ignore": [],
-  "notifications.ignore": ["spotify"],
+  "notifications.ignore": [
+    "spotify"
+  ],
   "theme.osd.radius": "0.15em",
   "bar.windowtitle.class_name": true,
   "bar.windowtitle.custom_title": true,
@@ -225,10 +253,10 @@
   "bar.workspaces.showWsIcons": true,
   "bar.workspaces.workspaceIconMap": {
     "1": {
-      "color": "#d87ab8"
+      "color": "#41a6b5"
     },
     "2": {
-      "color": "#0db9d7"
+      "color": "#9D7CD8"
     },
     "3": {
       "color": "#f7768e"
@@ -237,10 +265,10 @@
       "color": "#7aa2f7"
     },
     "5": {
-      "color": "#41a6b5"
+      "color": "#9ece6a"
     },
     "6": {
-      "color": "#9ece6a"
+      "color": "#0db9d7"
     },
     "7": {
       "color": "#bb9af7"
@@ -328,7 +356,8 @@
     "class:kitty$": "󰄛",
     "title:Settings": "",
     "title:Plex": "󰚺",
-    "title:Baldur's Gate 3": ""
+    "title:Baldur's Gate 3": "",
+    "title:Pal": "󰐝"
   },
   "bar.workspaces.icons.available": "",
   "bar.workspaces.icons.active": "",
@@ -413,12 +442,12 @@
   "hyprpanel.restartCommand": "hyprpanel -q; hyprpanel",
   "theme.bar.buttons.modules.hypridle.enableBorder": false,
   "bar.customModules.hypridle.label": false,
-  "bar.customModules.hypridle.offIcon": "",
+  "bar.customModules.hypridle.offIcon": "󰒲",
   "bar.customModules.hypridle.pollingInterval": 2000,
   "bar.launcher.icon": "󰣇",
   "menus.power.lowBatteryNotification": true,
   "menus.power.lowBatteryThreshold": 30,
-  "bar.autoHide": "fullscreen",
+  "bar.autoHide": "never",
   "bar.customModules.updates.icon.updated": "󰏖",
   "bar.customModules.updates.icon.pending": "󰏗",
   "theme.bar.buttons.workspaces.pill.height": "4em",
@@ -452,7 +481,7 @@
   "bar.customModules.cava.spaceCharacter": " ",
   "bar.customModules.cava.showActiveOnly": false,
   "bar.customModules.cava.showIcon": true,
-  "bar.customModules.hyprsunset.rightClick": "",
+  "bar.customModules.hyprsunset.rightClick": "notify-send test",
   "bar.customModules.hyprsunset.middleClick": "",
   "bar.customModules.hyprsunset.scrollUp": "",
   "bar.customModules.hyprsunset.scrollDown": "",
@@ -477,4 +506,3 @@
   "theme.bar.buttons.modules.hypridle.spacing": "0.6em",
   "theme.bar.buttons.modules.hyprsunset.spacing": "0.5em"
 }
-
