@@ -92,19 +92,19 @@ local function set_snacks_highlights()
   ---------------
   -- DASHBOARD --
   ---------------
-  vim.cmd([[highlight SnacksDashboardHeader guifg=#f38ba8]])
-  vim.cmd([[highlight SnacksDashboardIcon guifg=#b4befe]])
-  vim.cmd([[highlight SnacksDashboardTitle guifg=#b4befe]])
+  vim.cmd([[highlight SnacksDashboardHeader guifg=#f7768e]])
+  vim.cmd([[highlight SnacksDashboardIcon guifg=#41a6b5]])
+  vim.cmd([[highlight SnacksDashboardTitle guifg=#41a6b5]])
   vim.cmd([[highlight SnacksDashboardKey guifg=#89dceb]])
-  vim.cmd([[highlight SnacksDashboardDesc guifg=#fab387]])
-  vim.cmd([[highlight SnacksDashboardFile guifg=#cba6f7]])
-  vim.cmd([[highlight SnacksDashboardDir guifg=#f2cdcd]])
+  vim.cmd([[highlight SnacksDashboardDesc guifg=#e0af68]])
+  vim.cmd([[highlight SnacksDashboardFile guifg=#bb9af7]])
+  vim.cmd([[highlight SnacksDashboardDir guifg=#41a6b5]])
 
   ----------------
   --   INDENT   --
   ----------------
-  vim.cmd([[highlight SnacksIndent guifg=#26233a]])
-  vim.cmd([[highlight SnacksIndentScope guifg=#94e2d5]])
+  vim.cmd([[highlight SnacksIndent guifg=#292e42]])
+  vim.cmd([[highlight SnacksIndentScope guifg=#9d7cd8]])
 end
 
 -- Apply the Cursor highlight after setting the colorscheme
