@@ -5,9 +5,6 @@ return {
   {
     "saghen/blink.cmp",
     opts = {
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
-      },
       keymap = {
         ["<CR>"] = {},
         ["<S-CR>"] = { "select_and_accept", "fallback" },
