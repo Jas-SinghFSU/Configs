@@ -7,15 +7,8 @@
   "theme.bar.outer_spacing": "0em",
   "bar.layouts": {
     "0": {
-      "left": [
-        "dashboard",
-        "media"
-      ],
-      "middle": [
-        "notifications",
-        "workspaces",
-        "updates"
-      ],
+      "left": ["dashboard", "media"],
+      "middle": ["notifications", "workspaces", "updates"],
       "right": [
         "volume",
         "network",
@@ -27,16 +20,9 @@
       ]
     },
     "*": {
-      "left": [
-        "dashboard"
-      ],
-      "middle": [
-        "workspaces"
-      ],
-      "right": [
-        "volume",
-        "clock"
-      ]
+      "left": ["dashboard"],
+      "middle": ["workspaces"],
+      "right": ["volume", "clock"]
     }
   },
   "bar.workspaces.scroll_speed": 2,
@@ -119,21 +105,9 @@
   "menus.clock.weather.unit": "imperial",
   "theme.bar.layer": "bottom",
   "bar.windowtitle.title_map": [
-    [
-      "com.github.aylur.ags",
-      "",
-      "HyprPanel Settings"
-    ],
-    [
-      "zen-alpha",
-      "󰈹",
-      "Zen Browser"
-    ],
-    [
-      "org.prismlauncher.prismlauncher",
-      "󰍳",
-      "Prism Launcher"
-    ]
+    ["com.github.aylur.ags", "", "HyprPanel Settings"],
+    ["zen-alpha", "󰈹", "Zen Browser"],
+    ["org.prismlauncher.prismlauncher", "󰍳", "Prism Launcher"]
   ],
   "theme.osd.scaling": 100,
   "theme.notification.scaling": 95,
@@ -232,9 +206,7 @@
   "bar.media.show_active_only": true,
   "bar.customModules.updates.leftClick": "kitty -e $HOME/Scripts/updateArch.sh -arch",
   "bar.systray.ignore": [],
-  "notifications.ignore": [
-    "spotify"
-  ],
+  "notifications.ignore": ["spotify"],
   "theme.osd.radius": "0.15em",
   "bar.windowtitle.class_name": true,
   "bar.windowtitle.custom_title": true,
@@ -253,7 +225,7 @@
   "bar.workspaces.showWsIcons": true,
   "bar.workspaces.workspaceIconMap": {
     "1": {
-      "color": "#e87ab8"
+      "color": "#d87ab8"
     },
     "2": {
       "color": "#0db9d7"
@@ -505,3 +477,4 @@
   "theme.bar.buttons.modules.hypridle.spacing": "0.6em",
   "theme.bar.buttons.modules.hyprsunset.spacing": "0.5em"
 }
+
