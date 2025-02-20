@@ -80,7 +80,7 @@
   "bar.network.truncation_size": 10,
   "bar.network.truncation": true,
   "wallpaper.enable": true,
-  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/TokyoNight/island-house.jpeg",
+  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/TokyoNight/canyon-steps.jpeg",
   "bar.workspaces.workspaces": 8,
   "menus.dashboard.powermenu.sleep": "systemctl suspend",
   "menus.dashboard.powermenu.confirmation": true,
@@ -89,13 +89,13 @@
   "theme.bar.menus.border.radius": "0.3em",
   "notifications.timeout": 7000,
   "theme.osd.location": "bottom",
-  "theme.osd.margins": "0px 0px 350px 0px",
+  "theme.osd.margins": "7px 7px 350px 7px",
   "bar.bluetooth.label": true,
   "bar.media.show_label": true,
   "bar.workspaces.spacing": 1.5,
   "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em",
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.5em",
-  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.workspaceMask": true,
   "theme.bar.menus.opacity": 100,
   "theme.bar.opacity": 100,
   "theme.bar.buttons.opacity": 100,
@@ -253,10 +253,10 @@
   "bar.workspaces.showWsIcons": true,
   "bar.workspaces.workspaceIconMap": {
     "1": {
-      "color": "#41a6b5"
+      "color": "#bb9af7"
     },
     "2": {
-      "color": "#9D7CD8"
+      "color": "#0db9d7"
     },
     "3": {
       "color": "#f7768e"
@@ -265,19 +265,19 @@
       "color": "#7aa2f7"
     },
     "5": {
-      "color": "#9ece6a"
+      "color": "#41a6b5"
     },
     "6": {
-      "color": "#0db9d7"
+      "color": "#9ece6a"
     },
     "7": {
-      "color": "#bb9af7"
+      "color": "#ff9e64"
     },
     "8": {
       "color": "#e0af68"
     },
     "9": {
-      "color": "#ff9e64"
+      "color": "#2ac3de"
     },
     "10": {
       "color": "#73daca"
@@ -357,7 +357,8 @@
     "title:Settings": "",
     "title:Plex": "󰚺",
     "title:Baldur's Gate 3": "",
-    "title:Pal": "󰐝"
+    "class:^steam_app_1623730": "󰐝",
+    "Google-chrome": ""
   },
   "bar.workspaces.icons.available": "",
   "bar.workspaces.icons.active": "",
@@ -376,23 +377,23 @@
   "bar.systray.customIcons": {
     "obs": {
       "icon": "󰄄",
-      "color": "#eb6f92"
+      "color": "#f7768e"
     },
     "TelegramDesktop": {
       "icon": "",
-      "color": "#9ccfd8"
+      "color": "#2ac3de"
     },
     "chrome_status_icon_1s": {
       "icon": "󰙯",
-      "color": "#9ccfd8"
+      "color": "#7aa2f7"
     },
     "steam": {
       "icon": "󰓓",
-      "color": "#c4a7e7"
+      "color": "#6183bb"
     },
     "spotify-client": {
       "icon": "󰓇",
-      "color": "#31748f"
+      "color": "#9ece6a"
     }
   },
   "tooltip.scaling": 80,
@@ -504,5 +505,12 @@
   "theme.bar.buttons.clock.spacing": "0.5em",
   "theme.bar.buttons.modules.power.spacing": "0.45em",
   "theme.bar.buttons.modules.hypridle.spacing": "0.6em",
-  "theme.bar.buttons.modules.hyprsunset.spacing": "0.5em"
+  "theme.bar.buttons.modules.hyprsunset.spacing": "0.5em",
+  "theme.bar.shadowMargins": "0px 0px 6px 0px",
+  "theme.bar.shadow": "0px 0px 3px 1px #16161e",
+  "theme.osd.shadow": "0px 0px 3px 2px #16161e",
+  "theme.bar.enableShadow": true,
+  "theme.bar.menus.enableShadow": true,
+  "theme.osd.enableShadow": true,
+  "theme.notification.enableShadow": true
 }
