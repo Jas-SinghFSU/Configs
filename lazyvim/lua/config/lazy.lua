@@ -1,110 +1,110 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    spec = {
+        { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
+        { import = "lazyvim.plugins.extras.linting.eslint" },
+        { import = "lazyvim.plugins.extras.formatting.prettier" },
 
-    { import = "lazyvim.plugins.extras.coding.luasnip" },
+        { import = "lazyvim.plugins.extras.coding.luasnip" },
 
-    { import = "lazyvim.plugins.extras.util.dot" },
+        { import = "lazyvim.plugins.extras.util.dot" },
 
-    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-    -- { import = "lazyvim.plugins.extras.ai.copilot" },
+        { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+        -- { import = "lazyvim.plugins.extras.ai.copilot" },
 
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
+        { import = "lazyvim.plugins.extras.lang.typescript" },
+        { import = "lazyvim.plugins.extras.lang.rust" },
+        { import = "lazyvim.plugins.extras.lang.json" },
+        { import = "lazyvim.plugins.extras.lang.markdown" },
 
-    { import = "lazyvim.plugins.extras.editor.snacks_picker" },
+        { import = "lazyvim.plugins.extras.editor.snacks_picker" },
 
-    { import = "plugins" },
-  },
-  defaults = {
-    lazy = false,
-    version = false, -- always use the latest git commit
-  },
-  checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
-  }, -- automatically check for plugin updates
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
-        "tarPlugin",
-        "tohtml",
-        "tutor",
-        "zipPlugin",
-      },
+        { import = "plugins" },
     },
-  },
+    defaults = {
+        lazy = false,
+        version = false, -- always use the latest git commit
+    },
+    checker = {
+        enabled = true, -- check for plugin updates periodically
+        notify = false, -- notify on update
+    }, -- automatically check for plugin updates
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                "gzip",
+                -- "matchit",
+                -- "matchparen",
+                -- "netrwPlugin",
+                "tarPlugin",
+                "tohtml",
+                "tutor",
+                "zipPlugin",
+            },
+        },
+    },
 })
 
 require("functions.banner")
 
 -- Hyprlang LSP
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  pattern = { "*.hl", "hypr*.conf" },
-  callback = function(event)
-    print(string.format("starting hyprls for %s", vim.inspect(event)))
-    vim.lsp.start({
-      name = "hyprlang",
-      cmd = { "hyprls" },
-      root_dir = vim.fn.getcwd(),
-    })
-  end,
+    pattern = { "*.hl", "hypr*.conf" },
+    callback = function(event)
+        print(string.format("starting hyprls for %s", vim.inspect(event)))
+        vim.lsp.start({
+            name = "hyprlang",
+            cmd = { "hyprls" },
+            root_dir = vim.fn.getcwd(),
+        })
+    end,
 })
 
 -- Set cursor styles for different modes
 vim.opt.guicursor = {
-  "n-v-c-sm:block-Cursor", -- Normal, Visual, Command-line, Select modes
-  "i-ci-ve:ver25-Cursor", -- Insert modes
-  "r-cr-o:hor20-Cursor", -- Replace and other modes
+    "n-v-c-sm:block-Cursor", -- Normal, Visual, Command-line, Select modes
+    "i-ci-ve:ver25-Cursor", -- Insert modes
+    "r-cr-o:hor20-Cursor", -- Replace and other modes
 }
 
 -- Function to set the Cursor highlight group
 local function set_cursor_highlight()
-  vim.cmd([[highlight Cursor guibg=#b4bef3 guifg=#11111b]])
+    vim.cmd([[highlight Cursor guibg=#b4bef3 guifg=#11111b]])
 end
 
 local function set_snacks_highlights()
-  ---------------
-  -- DASHBOARD --
-  ---------------
-  vim.cmd([[highlight SnacksDashboardHeader guifg=#f7768e]])
-  vim.cmd([[highlight SnacksDashboardIcon guifg=#41a6b5]])
-  vim.cmd([[highlight SnacksDashboardTitle guifg=#41a6b5]])
-  vim.cmd([[highlight SnacksDashboardKey guifg=#89dceb]])
-  vim.cmd([[highlight SnacksDashboardDesc guifg=#e0af68]])
-  vim.cmd([[highlight SnacksDashboardFile guifg=#bb9af7]])
-  vim.cmd([[highlight SnacksDashboardDir guifg=#41a6b5]])
+    ---------------
+    -- DASHBOARD --
+    ---------------
+    vim.cmd([[highlight SnacksDashboardHeader guifg=#f7768e]])
+    vim.cmd([[highlight SnacksDashboardIcon guifg=#41a6b5]])
+    vim.cmd([[highlight SnacksDashboardTitle guifg=#41a6b5]])
+    vim.cmd([[highlight SnacksDashboardKey guifg=#89dceb]])
+    vim.cmd([[highlight SnacksDashboardDesc guifg=#e0af68]])
+    vim.cmd([[highlight SnacksDashboardFile guifg=#bb9af7]])
+    vim.cmd([[highlight SnacksDashboardDir guifg=#41a6b5]])
 
-  ----------------
-  --   INDENT   --
-  ----------------
-  vim.cmd([[highlight SnacksIndent guifg=#292e42]])
-  vim.cmd([[highlight SnacksIndentScope guifg=#9d7cd8]])
+    ----------------
+    --   INDENT   --
+    ----------------
+    vim.cmd([[highlight SnacksIndent guifg=#292e42]])
+    vim.cmd([[highlight SnacksIndentScope guifg=#9d7cd8]])
 end
 
 -- Apply the Cursor highlight after setting the colorscheme

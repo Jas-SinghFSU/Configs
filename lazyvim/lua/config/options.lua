@@ -57,7 +57,7 @@ vim.g.neovide_scroll_animation_length = 0.2
 -- })
 
 vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+    pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
 vim.g.lazyvim_prettier_needs_config = false

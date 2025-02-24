@@ -1,9 +1,9 @@
 return {
-  {
-    "echasnovski/mini.surround",
-    enabled = false,
-  },
-  {
-    "tpope/vim-surround",
-  },
+    {
+        "echasnovski/mini.surround",
+        enabled = false,
+    },
+    {
+        "tpope/vim-surround",
+    },
 }
