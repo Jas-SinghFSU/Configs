@@ -6,7 +6,7 @@
   "theme.bar.menus.menu.notifications.switch.puck": "#565f89",
   "theme.bar.menus.menu.notifications.switch.disabled": "#565f89",
   "theme.bar.menus.menu.notifications.switch.enabled": "#439cab",
-  "theme.bar.menus.menu.notifications.clear": "#439cab",
+  "theme.bar.menus.menu.notifications.clear": "#f7768e",
   "theme.bar.menus.menu.notifications.switch_divider": "#414868",
   "theme.bar.menus.menu.notifications.border": "#16161e",
   "theme.bar.menus.menu.notifications.background": "#16161e",
