@@ -17,6 +17,7 @@
         "updates"
       ],
       "right": [
+        "microphone",
         "volume",
         "network",
         "bluetooth",
@@ -34,6 +35,7 @@
         "workspaces"
       ],
       "right": [
+        "microphone",
         "volume",
         "clock"
       ]
@@ -63,7 +65,7 @@
   "bar.workspaces.show_numbered": false,
   "theme.matugen_settings.variation": "standard_2",
   "theme.osd.orientation": "horizontal",
-  "bar.workspaces.numbered_active_indicator": "underline",
+  "bar.workspaces.numbered_active_indicator": "highlight",
   "notifications.position": "top",
   "notifications.active_monitor": false,
   "notifications.monitor": 0,
@@ -80,13 +82,13 @@
   "bar.network.truncation_size": 10,
   "bar.network.truncation": true,
   "wallpaper.enable": true,
-  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/TokyoNight/canyon-steps.jpeg",
+  "wallpaper.image": "/home/jaskir/Pictures/Wallpapers/TokyoNight/forest-castle.webp",
   "bar.workspaces.workspaces": 8,
   "menus.dashboard.powermenu.sleep": "systemctl suspend",
   "menus.dashboard.powermenu.confirmation": true,
   "theme.bar.menus.menu.media.card.transparency": 100,
   "theme.bar.menus.menu.media.card.tint": 85,
-  "theme.bar.menus.border.radius": "0.3em",
+  "theme.bar.menus.border.radius": "0.1em",
   "notifications.timeout": 7000,
   "theme.osd.location": "bottom",
   "theme.osd.margins": "7px 7px 350px 7px",
@@ -95,7 +97,7 @@
   "bar.workspaces.spacing": 1.5,
   "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em",
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.5em",
-  "bar.workspaces.workspaceMask": true,
+  "bar.workspaces.workspaceMask": false,
   "theme.bar.menus.opacity": 100,
   "theme.bar.opacity": 100,
   "theme.bar.buttons.opacity": 100,
@@ -104,7 +106,7 @@
   "bar.battery.label": true,
   "terminal": "$TERMINAL",
   "theme.bar.buttons.windowtitle.spacing": "0.5em",
-  "theme.bar.menus.card_radius": "0.2em",
+  "theme.bar.menus.card_radius": "0.1em",
   "menus.dashboard.directories.left.directory1.label": "󰉍    Downloads",
   "menus.dashboard.directories.right.directory1.label": "󱧶    Documents",
   "menus.dashboard.directories.left.directory3.label": "󰚝    Projects",
@@ -135,7 +137,7 @@
       "Prism Launcher"
     ]
   ],
-  "theme.osd.scaling": 100,
+  "theme.osd.scaling": 75,
   "theme.notification.scaling": 95,
   "theme.bar.menus.menu.notifications.scaling": 90,
   "theme.bar.menus.menu.clock.scaling": 80,
@@ -353,7 +355,7 @@
   "theme.bar.menus.slider.progress_radius": "0.15rem",
   "bar.workspaces.showApplicationIcons": true,
   "bar.workspaces.applicationIconMap": {
-    "class:kitty$": "󰄛",
+    "class:kitty$": "󰆍",
     "title:Settings": "",
     "title:Plex": "󰚺",
     "title:Baldur's Gate 3": "",
@@ -403,7 +405,7 @@
   "theme.bar.menus.popover.scaling": 90,
   "bar.launcher.autoDetectIcon": true,
   "theme.osd.transition": "slide_down",
-  "menus.media.displayTimeTooltip": false,
+  "menus.media.displayTimeTooltip": true,
   "menus.media.displayTime": true,
   "theme.bar.buttons.modules.cpuTemp.enableBorder": false,
   "bar.customModules.cpuTemp.unit": "metric",
@@ -507,10 +509,19 @@
   "theme.bar.buttons.modules.hypridle.spacing": "0.6em",
   "theme.bar.buttons.modules.hyprsunset.spacing": "0.5em",
   "theme.bar.shadowMargins": "0px 0px 6px 0px",
-  "theme.bar.shadow": "0px 0px 3px 1px #16161e",
-  "theme.osd.shadow": "0px 0px 3px 2px #16161e",
+  "theme.bar.shadow": "0px 0px 2px 1px #0c0e14",
+  "theme.osd.shadow": "0px 0px 3px 2px #0c0e14",
   "theme.bar.enableShadow": true,
   "theme.bar.menus.enableShadow": true,
   "theme.osd.enableShadow": true,
-  "theme.notification.enableShadow": true
+  "theme.notification.enableShadow": true,
+  "bar.workspaces.zeroBasedModulo": 10,
+  "theme.bar.menus.shadow": "0px 0px 3px 1px #0c0e14",
+  "theme.notification.shadow": "0px 1px 2px 1px #0c0e14",
+  "theme.bar.buttons.modules.microphone.enableBorder": false,
+  "bar.customModules.microphone.label": false,
+  "theme.bar.buttons.modules.microphone.spacing": "0.55em",
+  "bar.customModules.microphone.leftClick": "menu:audio",
+  "bar.customModules.microphone.mutedIcon": "󰍭",
+  "bar.customModules.microphone.unmutedIcon": "󰍬"
 }
