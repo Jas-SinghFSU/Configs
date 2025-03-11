@@ -385,7 +385,9 @@
   "theme.bar.menus.menu.volume.card.color": "#1e1e2d",
   "theme.notification.border": "#1a1b26",
   "theme.bar.menus.menu.media.card.color": "#1e1e2d",
-  "theme.bar.buttons.modules.microphone.icon_background": "#73daca",
+  "theme.bar.buttons.modules.microphone.icon_background": "#f7768e",
   "theme.bar.buttons.modules.microphone.icon": "#242438",
-  "theme.bar.buttons.modules.microphone.text": "#73daca"
+  "theme.bar.buttons.modules.microphone.text": "#f7768e",
+  "theme.bar.buttons.modules.microphone.border": "#f7768e",
+  "theme.bar.buttons.modules.microphone.background": "#f7768e"
 }
