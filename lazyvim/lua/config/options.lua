@@ -61,3 +61,4 @@ vim.filetype.add({
 })
 
 vim.g.lazyvim_prettier_needs_config = false
+vim.g.lazyvim_blink_main = true

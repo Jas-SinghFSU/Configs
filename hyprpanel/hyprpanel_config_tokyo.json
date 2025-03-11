@@ -9,6 +9,7 @@
     "0": {
       "left": [
         "dashboard",
+        "windowtitle",
         "media"
       ],
       "middle": [
@@ -44,7 +45,7 @@
   "bar.workspaces.scroll_speed": 2,
   "bar.workspaces.reverse_scroll": false,
   "bar.workspaces.monitorSpecific": true,
-  "theme.osd.active_monitor": true,
+  "theme.osd.active_monitor": false,
   "theme.osd.monitor": 0,
   "theme.bar.floating": false,
   "theme.bar.buttons.notifications.spacing": "0.5em",
@@ -360,7 +361,8 @@
     "title:Plex": "󰚺",
     "title:Baldur's Gate 3": "",
     "class:^steam_app_1623730": "󰐝",
-    "Google-chrome": ""
+    "Google-chrome": "",
+    "vivaldi": ""
   },
   "bar.workspaces.icons.available": "",
   "bar.workspaces.icons.active": "",
@@ -510,18 +512,21 @@
   "theme.bar.buttons.modules.hyprsunset.spacing": "0.5em",
   "theme.bar.shadowMargins": "0px 0px 6px 0px",
   "theme.bar.shadow": "0px 0px 2px 1px #0c0e14",
-  "theme.osd.shadow": "0px 0px 3px 2px #0c0e14",
+  "theme.osd.shadow": "2px 2px 2px 1px #0c0e14",
   "theme.bar.enableShadow": true,
   "theme.bar.menus.enableShadow": true,
   "theme.osd.enableShadow": true,
   "theme.notification.enableShadow": true,
   "bar.workspaces.zeroBasedModulo": 10,
-  "theme.bar.menus.shadow": "0px 0px 3px 1px #0c0e14",
+  "theme.bar.menus.shadow": "0px 0px 3px 1px #16161e",
   "theme.notification.shadow": "0px 1px 2px 1px #0c0e14",
   "theme.bar.buttons.modules.microphone.enableBorder": false,
   "bar.customModules.microphone.label": false,
-  "theme.bar.buttons.modules.microphone.spacing": "0.55em",
-  "bar.customModules.microphone.leftClick": "menu:audio",
+  "theme.bar.buttons.modules.microphone.spacing": "0.5em",
+  "bar.customModules.microphone.leftClick": "~/Projects/Configs/Scripts/mic_mute.sh",
   "bar.customModules.microphone.mutedIcon": "󰍭",
-  "bar.customModules.microphone.unmutedIcon": "󰍬"
+  "bar.customModules.microphone.unmutedIcon": "󰍬",
+  "bar.customModules.microphone.rightClick": "menu:audio",
+  "theme.bar.menus.shadowMargins": "5px 5px",
+  "bar.customModules.updates.rightClick": "menu:calendar"
 }
