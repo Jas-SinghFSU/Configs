@@ -103,7 +103,10 @@ vim.keymap.set({ "n", "i" }, "<C-v>", '"+p')
 vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { silent = true })
 
 -- Execute scratchpad
-vim.keymap.set("n", "<leader>ej", "<cmd>w !node<CR>", { silent = true })
+vim.keymap.set("n", "<leader>ej", function()
+    local output = vim.fn.system("node " .. vim.fn.expand("%"))
+    vim.notify(output, vim.log.levels.ERROR)
+end, { silent = true })
 
 -- Remove keybinds
 vim.keymap.del("n", "<leader>e")
