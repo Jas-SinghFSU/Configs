@@ -1,11 +1,6 @@
 # Set the default shell program
 shell /usr/bin/zsh
 
-# Performance
-input_delay 0
-repaint_delay 0
-sync_to_monitor no
-
 # Set the color scheme
 # You would need to define the "Catppuccin Mocha" color scheme in a separate theme file
 # or manually set each color in this config file if it's not included with Kitty by default.
@@ -52,6 +47,6 @@ map ctrl+w close_tab
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Tokyo Night Moon
 include current-theme.conf
 # END_KITTY_THEME
