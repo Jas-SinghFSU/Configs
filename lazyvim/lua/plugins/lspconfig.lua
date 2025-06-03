@@ -25,6 +25,9 @@ return {
                         preferences = {
                             importModuleSpecifierEnding = "minimal",
                         },
+                        tsServer = {
+                            maxTsServerMemory = 8192,
+                        },
                     },
                 },
             },
