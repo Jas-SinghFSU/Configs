@@ -31,6 +31,7 @@ return {
                     },
                 },
             },
+            -- rust_analyzer handled by rustaceanvim
         },
     },
 }

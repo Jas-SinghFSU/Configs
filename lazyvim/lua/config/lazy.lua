@@ -25,9 +25,6 @@ require("lazy").setup({
 
         { import = "lazyvim.plugins.extras.util.dot" },
 
-        { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-        -- { import = "lazyvim.plugins.extras.ai.copilot" },
-
         { import = "lazyvim.plugins.extras.lang.typescript" },
         { import = "lazyvim.plugins.extras.lang.rust" },
         { import = "lazyvim.plugins.extras.lang.json" },

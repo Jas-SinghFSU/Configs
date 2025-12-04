@@ -12,6 +12,7 @@ return {
             "python",
             "query",
             "regex",
+            "rust",
             "tsx",
             "typescript",
             "hyprlang",

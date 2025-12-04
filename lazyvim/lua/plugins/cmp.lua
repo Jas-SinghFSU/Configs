@@ -13,6 +13,33 @@ return {
                 ["<Down>"] = { "scroll_documentation_down" },
                 ["<Up>"] = { "scroll_documentation_up" },
             },
+            sources = {
+                default = { "lsp", "path", "buffer", "snippets" },
+                providers = {
+                    lsp = {
+                        score_offset = 1000,
+                        priority = 100,
+                    },
+                    path = {
+                        score_offset = 50,
+                        priority = 50,
+                    },
+                    buffer = {
+                        score_offset = 0,
+                        priority = 25,
+                    },
+                    snippets = {
+                        score_offset = -1000,
+                        priority = 1,
+                    },
+                },
+            },
+            completion = {
+                documentation = {
+                    auto_show = true,
+                    auto_show_delay_ms = 200,
+                },
+            },
         },
     },
     -- {
